@@ -1,4 +1,7 @@
 * text=auto
+*.jpg binary
+*.jpeg binary
+*.png binary
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
