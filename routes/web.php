@@ -18,16 +18,21 @@ Route::get('/', fn () => view('home'));
 // asset => membuat full url project kita, dan menarget folder public
 
 
-Route::get('profile', function() {
+// Route::get('profile', function() {
 
-    $name = "Azka";
+//     $name = "Azka";
 
-    // compact('name') = ['name' => $name]
-    // harus sama property ('name') dan valuenya ($name)
-    return view('profile', compact('name'));
-});
+//     // compact('name') = ['name' => $name]
+//     // harus sama property ('name') dan valuenya ($name)
+//     return view('profile', compact('name'));
+// });
 
 
 Route::view('contact', 'contact');
 
+Route::view('profile', 'profile');
+
+Route::view('about', 'about');
+
 Route::view('posts/first-post', 'posts.show');
+
