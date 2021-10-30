@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }} | Code-Verse</title>
     {{-- menambah file css dari public/css/app.css --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {{-- tidak menggunakan asset agar tidak selalu clear cache --}}
+    <link rel="stylesheet" href="/css/app.css">
+    
+    {{-- fungsi isset nya di pindahkan ke controller applayout, kecuali tidak memiliki class components --}}
+    {{ $styles }}
+
 </head>
 <body>
     
@@ -16,6 +21,6 @@
     {{ $slot }}
 
     {{-- menambah file js dari public/js/app.js --}}
-    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+    <script src="/js/app.js"></script>
 </body>
 </html>
