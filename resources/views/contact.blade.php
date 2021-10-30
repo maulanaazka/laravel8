@@ -1,8 +1,3 @@
-@extends('layouts.app', ['title' => 'Contact Page'])
-
-@section('content')
-
+<x-app-layout title="Contact Page">
     <h1>Contact</h1>
-    <p>Hubungi saya melalui <strong style="color: red">form</strong> di bawah ini:</p>
-
-@endsection
+</x-app-layout>

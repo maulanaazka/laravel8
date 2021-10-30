@@ -33,6 +33,3 @@ Route::view('contact', 'contact');
 Route::view('profile', 'profile');
 
 Route::view('about', 'about');
-
-Route::view('posts/first-post', 'posts.show');
-

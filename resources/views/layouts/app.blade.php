@@ -13,7 +13,7 @@
     {{-- memanggil file navbar.blade dalam folder components --}}
     <x-navbar></x-navbar>
     
-    @yield('content')
+    {{ $slot }}
 
     {{-- menambah file js dari public/js/app.js --}}
     {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
