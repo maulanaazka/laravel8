@@ -10,8 +10,8 @@
 </head>
 <body>
     
-    {{-- memanggil file navbar.blade --}}
-    @include('layouts.navbar')
+    {{-- memanggil file navbar.blade dalam folder components --}}
+    <x-navbar></x-navbar>
     
     @yield('content')
 

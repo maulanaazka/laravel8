@@ -1,7 +1,7 @@
+{{-- layout komponen --}}
 <ul class="navbar">
-    <li><a href="/">Home</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/posts/first-post">Blog</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/profile">Profile</a></li>
+    {{-- data dinamis yang diambil dari app/view/components/navbar --}}
+    @foreach ($navbar as $name => $url)
+        <li><a href="{{$url}}">{{$name}}</a></li>
+    @endforeach
 </ul>

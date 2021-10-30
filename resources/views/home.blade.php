@@ -4,6 +4,7 @@
     
     {{-- anonymous component => dengan persyaratan harus ada folder components --}}
     <x-alert>
+        
         <x-slot name='title'>
             Header Component with <strong>Strong</strong> tag 
         </x-slot>
