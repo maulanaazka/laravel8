@@ -1,3 +1,4 @@
-<x-app-layout title="Profile Page">
-    <h1>Profile</h1>
+{{-- dapat menggunakan : jika dalam laravel component --}}
+<x-app-layout :title="$name ?? 'Profile'">
+    <h1>{{ $name ?? 'Profile' }}</h1>
 </x-app-layout>

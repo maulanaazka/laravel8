@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 // parameter 1 -> url, parameter 2 -> view,
@@ -30,6 +31,16 @@ Route::get('/', fn () => view('home'));
 
 Route::view('contact', 'contact');
 
-Route::view('profile', 'profile');
-
 Route::view('about', 'about');
+
+// melakukan request data dari url
+// Route::get('profile/', function(Request $request) {
+//     $name = $request->name;
+//     return view('profile', ['name' => $name]);
+// });
+
+// menambahkan wildcard pada url
+Route::get('profile/{username}', function($username) {
+    return view('profile', ['name' => $username]);
+});
+
