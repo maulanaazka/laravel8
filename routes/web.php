@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 // parameter 1 -> url, parameter 2 -> view,
@@ -13,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // mengarahkan ke file ..\view\home.blade.php
-Route::get('/', fn () => view('home'));
+// Route::get('/', fn () => view('home'));
 // Route::get('/', fn () => dd(asset('css/app.css'))); // php 7.4
 // dd => die n dump
 // asset => membuat full url project kita, dan menarget folder public
@@ -29,9 +32,9 @@ Route::get('/', fn () => view('home'));
 // });
 
 
-Route::view('contact', 'contact');
+// Route::view('contact', 'contact');
 
-Route::view('about', 'about');
+// Route::view('about', 'about');
 
 // melakukan request data dari url
 // Route::get('profile/', function(Request $request) {
@@ -40,7 +43,12 @@ Route::view('about', 'about');
 // });
 
 // menambahkan wildcard pada url
-Route::get('profile/{username}', function($username) {
-    return view('profile', ['name' => $username]);
-});
+// Route::get('profile/{username}', function($username) {
+//     return view('profile', ['name' => $username]);
+// });
 
+Route::get('/', HomeController::class);
+
+Route::get('contact', [ContactController::class, 'create']);
+// gunakan post jika ada action (create db, sending email, dsb)
+Route::post('contact', [ContactController::class, 'store']);
