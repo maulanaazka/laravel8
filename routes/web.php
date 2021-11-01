@@ -54,6 +54,7 @@ Route::get('/', HomeController::class);
 Route::get('profile/{identifier}', ProfileInformationController::class);
 
 Route::get('tasks', [TaskController::class, 'index']);
+Route::post('tasks', [TaskController::class, 'store']);
 
 Route::get('contact', [ContactController::class, 'create']);
 // gunakan post jika ada action (create db, sending email, dsb)

@@ -29,6 +29,7 @@ class Navbar extends Component
             'About' => '/about',
             'Contact' => '/contact',
             'Profile' => '/profile',
+            'Tasks' => '/tasks',
         ];
         // mengubah mindset untuk menggunakan komponen, bukan include
         return view('layouts.navbar', compact('navbar'));
