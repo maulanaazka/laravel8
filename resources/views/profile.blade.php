@@ -1,4 +1,4 @@
 {{-- dapat menggunakan : jika dalam laravel component --}}
-<x-app-layout :title="$name ?? 'Profile'">
-    <h1>{{ $name ?? 'Profile' }}</h1>
+<x-app-layout :title="$username ?? 'Profile'">
+    <h1>{{ $username ?? 'Profile' }}</h1>
 </x-app-layout>
