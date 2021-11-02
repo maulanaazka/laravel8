@@ -14,7 +14,7 @@ class TaskController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request) // reqquest untuk memasukkan / mengubah file dalam db
     {
         DB::table('tasks')->insert([
             'list' => $request->list,
@@ -34,5 +34,11 @@ class TaskController extends Controller
     {
         DB::table('tasks')->where('id', $id)->update(['list' => $request->list]);
         return redirect('tasks');
+    }
+
+    public function destroy($id)
+    {
+        $task = DB::table('tasks')->where('id', $id)->delete();
+        return back();
     }
 }
