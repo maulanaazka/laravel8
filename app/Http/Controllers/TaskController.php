@@ -17,10 +17,10 @@ class TaskController extends Controller
 
     public function store(Request $request) // reqquest untuk memasukkan / mengubah file dalam db
     {
-        Task::create([
-            'list' => $request->list,
-            'mark' => false,
-        ]); // create akan memberikan feedback, sedangkan insert tidak (hanya membeikan nilai boolean)
+        // membuat simple inputan jika hanya list saja yg diinput (harus ada default value untuk yg lain)
+        // jika name dalam blade sama dengan name dalam db
+        // dd($request->all());
+        Task::create($request->all()); // create akan memberikan feedback, sedangkan insert tidak (hanya membeikan nilai boolean)
 
         return back();
     }
