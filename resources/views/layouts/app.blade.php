@@ -7,7 +7,7 @@
     <title>{{ $title }} | Code-Verse</title>
     {{-- menambah file css dari public/css/app.css --}}
     {{-- tidak menggunakan asset agar tidak selalu clear cache --}}
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     
     {{-- fungsi isset nya di pindahkan ke controller applayout, kecuali tidak memiliki class components --}}
     {{ $styles }}
@@ -17,10 +17,13 @@
     
     {{-- memanggil file navbar.blade dalam folder components --}}
     <x-navbar></x-navbar>
-    
-    {{ $slot }}
+    <div class="pt-4">
+        
+        {{ $slot }}
+
+    </div>
 
     {{-- menambah file js dari public/js/app.js --}}
-    <script src="/js/app.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
