@@ -51,14 +51,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 
-Route::get('profile/{identifier}', ProfileInformationController::class);
+// Route::get('profile/{identifier}', ProfileInformationController::class);
 
-Route::get('tasks', [TaskController::class, 'index']);
-Route::post('tasks', [TaskController::class, 'store']);
-Route::get('tasks/{id}/edit', [TaskController::class, 'edit']);
-Route::put('tasks/{id}', [TaskController::class, 'update']);
-Route::delete('tasks/{id}', [TaskController::class, 'destroy']);
+Route::resource('tasks', TaskController::class);
+// Route::get('tasks', [TaskController::class, 'index']);
+// Route::post('tasks', [TaskController::class, 'store']);
+// Route::get('tasks/{id}/edit', [TaskController::class, 'edit']);
+// Route::put('tasks/{id}', [TaskController::class, 'update']);
+// Route::delete('tasks/{id}', [TaskController::class, 'destroy']);
 
-Route::get('contact', [ContactController::class, 'create']);
-// gunakan post jika ada action (create db, sending email, dsb)
-Route::post('contact', [ContactController::class, 'store']);
+// Route::get('contact', [ContactController::class, 'create']);
+// // gunakan post jika ada action (create db, sending email, dsb)
+// Route::post('contact', [ContactController::class, 'store']);
